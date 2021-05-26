@@ -1,4 +1,4 @@
 *.aux
 *.cls
 *.log
-*.pdf
+*.out

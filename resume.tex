@@ -1,53 +1,94 @@
-% 
-% CV librement inspiré de https://github.com/sb2nov/resume
+\documentclass[10pt,a4paper,sans]{moderncv}
+\usepackage{multicol}
 
-\documentclass[10pt, a4paper]{resume}
+\moderncvstyle{classic}
+\moderncvcolor{black}
 
-% Pour écrire correctement les accents en français
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{babel}
+% Réglage de la largeur de la colonne
+\setlength{\hintscolumnwidth}{4cm}
+
+\usepackage[utf8]{inputenc} % encodage, à modifier selon vos habitudes
+\usepackage[scale=0.8]{geometry} % pour régler les marges du CV les options habituelles de l'extension geometry peuvent s'appliquer ici
+\usepackage{helvet} % pour utiliser la police helvetica par exemple.
+\usepackage[french]{babel} % pour un document en français.
+
+% Insertion des données personnelles
+\name{Alain}{Demenet}
+\title{Développeur – Formateur}
+\address{3 rue du Landy}{92110 Clichy}{France}
+\phone[mobile]{06~00~00~00~00}
+% \phone[fixed]{01~01~88~33~55}
+% \phone[fax]{02~11~22~33~44}
+\email{alain.demenet@gmail.com}
+\homepage{https://ademenet.github.io}
+\social[linkedin]{alain-demenet}
+% \social[twitter]{pierre.durand}
+\social[github]{ademenet}
+% \extrainfo{informations complémentaires.}
+% \quote{Encore un titre}
+\nopagenumbers % Évite d'afficher le compteur de page
+
+% Insérer la photo
+% \photo[64pt][0.4pt]{maphoto}
 
 % Début du contenu
 \begin{document}
 
-% --------------------------------------------- Informations personnelles ----------------------------------------------
+\makecvtitle
 
-% \photo{./examples/profile.png}
-\name{Alain}{Demenet}
-\position{Développeur & datascientist}
-\address{3 rue du Landy, 92110 - Clichy}
+\section{Expériences professionnelles}
+    \cventry{juin 2020 • aujourd'hui}{Développeur}{Jedha Bootcamp}{Paris}{}
+    {
+        Développement de la plateforme d'apprentissage JULIE et d'outils de gestion internes.\\
+        Technologies utilisées :
+        {\setlength\multicolsep{0pt}
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item React, Next.js
+                \item Python (multiples backends avec Flask et FastAPI)
+                \item MongoDB
+                \item AWS (Lambda, RDS, DynamoDB)
+                \item Github Actions
+            \end{itemize}
+        \end{multicols}}
+    }
 
-\mobile{+33 6 85 09 30 43}
-\email{alain.demenet@gmail.com}
-\homepage{www.posquit0.com}
-\github{ademenet}
-\linkedin{Alain Demenet}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
+    \cventry{novembre 2018 • juin 2020}{Data Scientist}{Freelance}{Paris}{}{}
 
-\makecvheader
+    \cventry{juillet 2018 • janvier 2020}{Data Scientist}{QuantCube Technology}{Paris}{}
+        {Développement d'algorithmes de segmentation d'images utilisant des solutions de deep learning.}
 
-\section{Expériences}
-    \resumeSubHeadingListStart
-        \resumeSubheading
-            {Co-founder and president}{42AI}{février 2017}{aujourd'hui}
-            {42AI est une association étudiante qui promeut l’intelligence artificielle auprès des élèves de 42 en
-            développant des projets et en créant un éco-système entre entreprises et étudiant}
+    \cventry{février 2016 • avril 2016}{Stage en deep learning}{Scortex}{Paris}{}
+        {Développement d'algorithmes de détections d'objets et de vision par ordinateur.}
 
-\section{Diplômes}
+    \cventry{2013 • 2015}{Animateur}{écoles primaires}{Versailles}{}
+        {Organisation et animation d'atelier scientifiques pour les enfants (robotique, informatique).}
 
-\section{Contact}
+\section{Formations}
+    \cventry{2005 • 2009}{Licence Sciences et vie de la Terre}{Université Paris Diderot}{Paris}{}
+        {}
+    \cventry{2009 • 2011}{Master Médiations des connaissances environnementales}{Université de Versailles Saint-Quentin-en-Yvelines}{Versailles}{\textit{}}
+        {}
+    \cventry{2015 • 2018}{Formation architecte en technologie du Numérique}{École 42}{Paris}{}
+        {
+            L'école 42 est une école singulière sans professeurs ni cours. Nous y
+            apprenons le développement informatique par l'intermédiaire de projets et du
+            partage avec les pairs.
+        }
 
-\section{Compétences}
+\section{Compétences informatiques}
+    % Possibilité de mettre les entrées en deux colonnes 
+    \cvitem{Langages}{Python, Javascript, HTML, CSS, SQL, Bash, C/C++}
+    \cvitem{Webdev}{React, Next.js}
+    \cvitem{Machine Learning}{Pandas, Numpy, Scikit, Tensorflow}
+    \cvitem{Other}{Git, Linux, Docker, AWS}
 
 \section{Langues}
+    % Possibilité d'insérer des commentaires dans les entrées
+    \cvdoubleitem{Anglais}{Lu, parlé, écrit}{Espagnol}{Notions}
 
-\section{Intérêts}
-
+\section{Centres d'intérêts}
+    \cvdoubleitem{Photo argentique}{Dévelopemment et tirage photos}{Wushu}{Arts martiaux chinois}
+    \cvdoubleitem{Trompette}{Fanfares}{}{}
 
 \end{document}
